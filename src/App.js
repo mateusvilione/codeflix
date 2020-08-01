@@ -2,14 +2,20 @@ import React from 'react';
 
 import dadosIniciais from './data/dados_iniciais.json';
 
+import styled from 'styled-components';
 import Menu from './components/Menu';
 import Banner from './components/BannerMain';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 
+const AppWrapper = styled.div`
+  background: var(--grayDark);
+`;
+
 function App() {
   return (
-    <div>
+    <AppWrapper>
+      
       <Menu />
 
       <Banner
@@ -36,7 +42,7 @@ function App() {
       />
 
       <Footer />
-    </div>
+    </AppWrapper>
   );
 }
 

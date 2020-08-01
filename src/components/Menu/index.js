@@ -1,21 +1,17 @@
 import React from 'react';
-import './style.css';
 import Logo from '../../assets/img/logo.png';
-import ButtonLink from '../ButtonLink';
-import Button from '../Button';
+import { MenuWrapper, ButtonLink, LogoImage } from './style';
 
 export default function Menu() {
     return (
-        <header>
-            <nav className="Menu">
-                <a href="/">
-                    <img className="Logo" src={Logo} alt="CodeFlix Logo" />
-                </a>
+        <MenuWrapper>
+            <a href="/">
+                <LogoImage src={Logo} alt="CodeFlix Logo" />
+            </a>
 
-                <Button as="a" className="ButtonLink" href="/">
-                    Novo vídeo
-                </Button>
-            </nav>
-        </header>
+            <ButtonLink as="a"href="/">
+                Novo vídeo
+            </ButtonLink>
+        </MenuWrapper>
     );
 }
