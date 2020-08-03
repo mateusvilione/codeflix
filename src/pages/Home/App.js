@@ -1,18 +1,25 @@
 import React from 'react';
 
-import dadosIniciais from './data/dados_iniciais.json';
+import dadosIniciais from '../../data/dados_iniciais.json';
 
 import styled from 'styled-components';
-import Menu from './components/Menu';
-import Banner from './components/BannerMain';
-import Carousel from './components/Carousel';
-import Footer from './components/Footer';
+import Menu from '../../components/Menu';
+import Banner from '../../components/BannerMain';
+import Carousel from '../../components/Carousel';
+import Footer from '../../components/Footer';
 
 const AppWrapper = styled.div`
   background: var(--grayDark);
+
+  padding-top: 94px;
+
+
+  @media (max-width: 800px){
+    padding-top: 40px;
+  }
 `;
 
-function App() {
+function Home() {
   return (
     <AppWrapper>
       
@@ -29,15 +36,12 @@ function App() {
         category={dadosIniciais.categorias[0]}
       />
       <Carousel
-        ignoreFirstVideo
         category={dadosIniciais.categorias[1]}
       />
       <Carousel
-        ignoreFirstVideo
         category={dadosIniciais.categorias[2]}
       />
       <Carousel
-        ignoreFirstVideo
         category={dadosIniciais.categorias[3]}
       />
 
@@ -46,4 +50,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

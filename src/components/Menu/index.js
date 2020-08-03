@@ -1,15 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+
 import Logo from '../../assets/img/logo.png';
 import { MenuWrapper, ButtonLink, LogoImage } from './style';
 
 export default function Menu() {
     return (
         <MenuWrapper>
-            <a href="/">
+            <Link to="/">
                 <LogoImage src={Logo} alt="CodeFlix Logo" />
-            </a>
+            </Link>
 
-            <ButtonLink as="a"href="/">
+            <ButtonLink as={Link} to="/cadastro/video">
                 Novo vídeo
             </ButtonLink>
         </MenuWrapper>
